@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myFishingDays": {
+    "test": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myFishingDays",
+            "outputPath": "dist/test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": []
           },
@@ -61,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "myFishingDays:build"
+            "browserTarget": "test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "myFishingDays:build:production"
+              "browserTarget": "test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myFishingDays:build"
+            "browserTarget": "test:build"
           }
         },
         "test": {
@@ -109,16 +111,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "myFishingDays:serve"
+            "devServerTarget": "test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "myFishingDays:serve:production"
+              "devServerTarget": "test:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "myFishingDays"
+  "defaultProject": "test"
 }
