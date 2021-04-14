@@ -8,21 +8,22 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./days.component.css']
 })
 export class DaysComponent implements OnInit {
-    day: {
-      data: Date,
-      ora: number,
-      luogo: string;
-      condizioniMeteo: string;
-      orarioSchiusa: number;
-      insetti: string;
-      catture: number;
-      foto: Blob;
-    };
-  constructor() {}
+  day: {
+    id: number,
+    data: number,
+    ora: number,
+    luogo: string;
+    condizioniMeteo: string;
+    orarioSchiusa: number;
+    insetti: string;
+    catture: number;
+    foto: Blob;
+  };
+  constructor() { }
 
   ngOnInit(): void {
   }
-addDay(): void {
-  console.log(this.day.condizioniMeteo);
-}
+  addDay(): void {
+    console.log(this.day.condizioniMeteo);
+  }
 }
