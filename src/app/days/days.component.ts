@@ -18,9 +18,11 @@ export class DaysComponent implements OnInit {
       catture: number;
       foto: Blob;
     };
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
-
+addDay(): void {
+  console.log(this.day.condizioniMeteo);
+}
 }
