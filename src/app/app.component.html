@@ -1,14 +1,54 @@
-<h1>{{title}}</h1>
-<div class="primo">
-  <tr>
-    <td>Data</td>
-    <td>Ora</td>
-    <td>Luogo</td>
-    <td>Orario schiusa</td>
-    <td>Insetti</td>
-    <td>Catture</td>
-    <td>Immagini</td>
-  </tr>
-  <button type="button" class="btn btn-primary">Primary</button>
-  <app-days></app-days>
-</div>
+<h1 class="display-3 text-center">{{title}}</h1>
+<hr>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Data</th>
+      <th scope="col">Ora</th>
+      <th scope="col">Luogo</th>
+      <th scope="col">Condizioni meteo</th>
+      <th scope="col">Orario schiusa</th>
+      <th scope="col">Insetti</th>
+      <th scope="col">Catture</th>
+      <th scope="col">Foto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>1.1.2020</td>
+      <td>19.00</td>
+      <td>Dora</td>
+      <td>Sereno</td>
+      <td>19.00</td>
+      <td>Epeorus</td>
+      <td>3</td>
+      <td>......</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>1.1.2020</td>
+      <td>19.00</td>
+      <td>Dora</td>
+      <td>Sereno</td>
+      <td>19.00</td>
+      <td>Epeorus</td>
+      <td>3</td>
+      <td>......</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>1.1.2020</td>
+      <td>19.00</td>
+      <td>Dora</td>
+      <td>Sereno</td>
+      <td>19.00</td>
+      <td>Epeorus</td>
+      <td>3</td>
+      <td>......</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-days></app-days>
