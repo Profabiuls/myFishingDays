@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -11,10 +12,11 @@ export class DaysComponent implements OnInit {
       data: Date,
       ora: number,
       luogo: string;
+      condizioniMeteo: string;
       orarioSchiusa: number;
       insetti: string;
       catture: number;
-      immagini: Blob;
+      foto: Blob;
     };
   constructor() { }
 
