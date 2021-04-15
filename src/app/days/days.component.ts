@@ -1,7 +1,8 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Days } from './../classes/Dayclass';
-
+import { DatiService } from './../service/service';
 
 @Component({
   selector: 'app-days',
@@ -9,12 +10,12 @@ import { Days } from './../classes/Dayclass';
   styleUrls: ['./days.component.css']
 })
 export class DaysComponent implements OnInit {
-day: Days [];
-  constructor() { }
+days: Days[] = [];
+  constructor(private service: DatiService) { }
 
   ngOnInit(): void {
   }
   addDay(): void {
-    console.log(this.day);
+    console.log(this.days);
   }
 }

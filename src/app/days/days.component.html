@@ -12,6 +12,7 @@
     <td>Catture</td>
     <td>Foto</td>
   </tr>
+
   <td><input class="form-control"></td>
   <td><input class="form-control"></td>
   <td><input class="form-control"></td>
@@ -25,3 +26,5 @@
 <div>
   <button type="button" class="btn btn-success"(click)="addDay()">Salva</button>
 </div>
+
+<div app-days *ngFor="let day of days"></div>
