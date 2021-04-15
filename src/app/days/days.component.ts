@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Days } from './../classes/Dayclass';
 
 
 @Component({
@@ -8,22 +9,12 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./days.component.css']
 })
 export class DaysComponent implements OnInit {
-  day: {
-    id: number,
-    data: number,
-    ora: number,
-    luogo: string;
-    condizioniMeteo: string;
-    orarioSchiusa: number;
-    insetti: string;
-    catture: number;
-    foto: Blob;
-  };
+day: Days [];
   constructor() { }
 
   ngOnInit(): void {
   }
   addDay(): void {
-    console.log(this.day.condizioniMeteo);
+    console.log(this.day);
   }
 }
