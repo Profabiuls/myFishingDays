@@ -12,20 +12,10 @@
     <td>Catture</td>
     <td>Foto</td>
   </tr>
+<form #f="ngForm" (submit)="add(f)">
+<input class="form-control" type="text" placeholder="add id" [ngModel]="days" name="id">
 
-  <td><input class="form-control"></td>
-  <td><input class="form-control"></td>
-  <td><input class="form-control"></td>
-  <td><input class="form-control"></td>
-  <td><input class="form-control"></td>
-  <td><input class="form-control"></td>
-  <td><input class="form-control"></td>
-  <td><input class="form-control"></td>
-</div>
-<br>
-<div>
-  <div *ngFor let day of days>{{ days }}</div>
-  <button type="button" class="btn btn-success"(click)="addDay()">Salva</button>
-</div>
-
-<div app-days *ngFor="let day of days"></div>
+<li *ngFor="let day of days">
+  {{ days | json }} 
+</li>
+</form>

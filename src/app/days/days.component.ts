@@ -1,6 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Days } from './../classes/Dayclass';
 import { DatiService } from './../service/service';
 
@@ -15,7 +15,8 @@ days: Days[] = [];
 
   ngOnInit(): void {
   }
-  addDay(): void {
+  add(form: NgForm): void {
+    this.days.push(form.value as Days);
     console.log(this.days);
   }
 }
